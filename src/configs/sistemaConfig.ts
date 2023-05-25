@@ -5,8 +5,8 @@ export const domainNameHomo = 'URLDOSISTEMAEMHOMO';
 export const domainNameDesv = 'localhost';
 */
 
-export const sistemaNameSSO = 'GMOSPC';
-export const sistemaDescricao = 'Plataforma para gerenciamento de materias.';
+export const sistemaNameSSO = 'PROGAP';
+export const sistemaDescricao = 'Plataforma para gerenciamento de recursos.';
 export const sistemaVersao = '1.0.0-00';
 export const domainNameProd = 'gmospc.ssp.go.gov.br';
 export const domainNameHomo = 'gmospc-homo.ssp.go.gov.br';
