@@ -11,7 +11,7 @@ if (window.location.hostname.indexOf(domainNameProd) > -1) {
   urlsServices.SIGUWS = 'https://siguws.ssp.go.gov.br/';
   urlsServices.LEGADOWS = 'https://legadows.ssp.go.gov.br/';
   urlsServices.SSOWS = 'https://ssows.ssp.go.gov.br/';
-  urlsServices.BACKENDWS = 'URLBACKENDPROD';
+  urlsServices.BACKENDWS = 'pcditsrv024.intra.goias.gov.br';
   ambiente = 'PROD';
 } else {
   urlsServices.SIGUWS = 'https://siguws-h.ssp.go.gov.br/';
