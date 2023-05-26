@@ -213,7 +213,7 @@ const ModalResource = ({ id, openModal, closeModal }: Props) => {
             </Form.Item>
           </Col>
 
-          <Col span={6}>
+          <Col span={form.getFieldValue(['type']) !== 'Fundo a Fundo' ? 6 : 8}>
             <Form.Item name={['commitmentDate']} label="Data do empenho">
               <ReactInputMask
                 className="input-mask-date"
@@ -223,7 +223,7 @@ const ModalResource = ({ id, openModal, closeModal }: Props) => {
               />
             </Form.Item>
           </Col>
-          <Col span={6}>
+          <Col span={form.getFieldValue(['type']) !== 'Fundo a Fundo' ? 6 : 8}>
             <Form.Item name={['deliveryDate']} label="Data da entrega">
               <ReactInputMask
                 className="input-mask-date"
@@ -233,7 +233,7 @@ const ModalResource = ({ id, openModal, closeModal }: Props) => {
               />
             </Form.Item>
           </Col>
-          <Col span={6}>
+          <Col span={form.getFieldValue(['type']) !== 'Fundo a Fundo' ? 6 : 8}>
             <Form.Item name={['settlementDate']} label="Data da liquidação">
               <ReactInputMask
                 className="input-mask-date"
