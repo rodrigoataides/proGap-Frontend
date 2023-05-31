@@ -68,7 +68,6 @@ interface ExpandedDataTypeObject {
 
 export default function Resources() {
   const [showModal, setShowModal] = useState(false);
-
   const [modalUnits, setModalDestinations] = useState(false);
   const [modalObjectResource, setModalObjectResourse] = useState(false);
   const [modalObjectDelivery, setModalObjectDelivery] = useState(false);

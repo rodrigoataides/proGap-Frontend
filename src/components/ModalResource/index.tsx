@@ -1,5 +1,4 @@
 import { message } from 'antd';
-
 import { Col, Form, Input, Modal, Row, Select } from 'antd';
 import { useEffect, useState } from 'react';
 import ReactInputMask from 'react-input-mask';
@@ -9,8 +8,8 @@ import {
   updateResource,
 } from '../../hooks/resourceService';
 import { getAxles } from '../../hooks/axleService';
-
 require('./index.css');
+
 type AxlesResponse = {
   id: string;
   name: string;
@@ -162,7 +161,7 @@ const ModalResource = ({ id, openModal, closeModal }: Props) => {
           )}
 
           <Col span={8}>
-            <Form.Item name={['source']} label="Fonte" hasFeedback>
+            <Form.Item name={['source']} label="Fonte">
               <Select
                 options={[
                   { value: 'Federal', label: 'Federal' },
