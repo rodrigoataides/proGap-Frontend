@@ -9,7 +9,7 @@ export const sistemaNameSSO = 'PROGAP';
 export const sistemaDescricao = 'Plataforma para gerenciamento de recursos.';
 export const sistemaVersao = '1.0.0-00';
 export const domainNameProd = 'gmospc.ssp.go.gov.br';
-export const domainNameHomo = 'gmospc-homo.ssp.go.gov.br';
+export const domainNameHomo = 'http://progap.intra.goias.gov.br';
 
 export const domainNameDesv = 'localhost';
 
