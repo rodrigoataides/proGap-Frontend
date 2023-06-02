@@ -17,7 +17,7 @@ if (window.location.hostname.indexOf(domainNameProd) > -1) {
   urlsServices.SIGUWS = 'https://siguws-h.ssp.go.gov.br/';
   urlsServices.LEGADOWS = 'https://legadows-h.ssp.go.gov.br/';
   urlsServices.SSOWS = 'https://ssows-h.ssp.go.gov.br/';
-  urlsServices.BACKENDWS = '10.6.52.25';
+  urlsServices.BACKENDWS = 'http://10.6.52.25';
   ambiente = 'HOMO';
   if (window.location.hostname.indexOf(domainNameDesv) > -1) {
     //PARA DESENVOLVIMENTO
