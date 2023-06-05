@@ -33,13 +33,14 @@ export const getConfig = (type: string) => {
   const configPriv = {
     headers: {
       'Access-Control-Allow-Origin': `${window.location.origin}`,
-      'Access-Control-Allow-Headers': 'Authorization',
+      'Access-Control-Allow-Headers':
+        'Authorization, Origin, X-Requested-With, Content-Type, Accept, Token-Sso',
       'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTION',
       'Content-Type': 'application/json;charset=UTF-8',
       // eslint-disable-next-line prettier/prettier
       Authorization: `Bearer ${localStorage.getItem('token_sso')}`,
       // eslint-disable-next-line prettier/prettier
-      'Token-sso': localStorage.getItem('token_sso'),
+      'token-sso': localStorage.getItem('token_sso'),
     },
   };
 
