@@ -31,13 +31,14 @@ export const getConfig = (type: string) => {
   };
   const configPriv = {
     headers: {
-      'Access-Control-Allow-Origin': `${window.location.origin}`,
-      'Access-Control-Allow-Headers':
-        'Authorization, Origin, X-Requested-With, Content-Type, Accept',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HEAD, PUT',
-      'Content-Type': 'application/json;charset=utf-8',
+      //'Access-Control-Allow-Origin': `${window.location.origin}`,
+      //'Access-Control-Allow-Headers':
+      //'Authorization, Origin, X-Requested-With, Content-Type, Accept',
+      //'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HEAD, PUT',
+      //'Content-Type': 'application/json;charset=utf-8',
       // prettier-ignore
-      'Authorization': `Bearer ${localStorage.getItem('token_sso')}`,
+      //'Authorization': `Bearer ${localStorage.getItem('token_sso')}`,
+      'x-access-token': localStorage.getItem('token_sso'),
     },
   };
   /*const configPriv = {
