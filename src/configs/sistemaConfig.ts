@@ -32,7 +32,7 @@ export const getConfig = (type: string) => {
 
   const configPriv = {
     headers: {
-      'Access-Control-Allow-Origin': `${window.location.origin}`,
+      'Access-Control-Allow-Origin': '*', //`${window.location.origin}`,
       'Access-Control-Allow-Headers':
         'Authorization, Origin, X-Requested-With, Content-Type, Accept, Token-Sso',
       'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTION',
