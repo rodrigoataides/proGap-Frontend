@@ -39,10 +39,10 @@ export const getConfig = (type: string) => {
       'Content-Type': 'application/json;charset=UTF-8',
       // eslint-disable-next-line prettier/prettier
       // prettier-ignore
-      'Authorization': `Bearer ${localStorage.getItem('token_sso')}`,
+      'authorization': `Bearer ${localStorage.getItem('token_sso')}`,
       // prettier-ignore
       // eslint-disable-next-line prettier/prettier
-      'Token-Sso': localStorage.getItem('token_sso'),
+      'token-sso': localStorage.getItem('token_sso'),
     },
   };
 
