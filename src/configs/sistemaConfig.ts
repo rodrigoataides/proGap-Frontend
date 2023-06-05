@@ -33,8 +33,7 @@ export const getConfig = (type: string) => {
   const configPriv = {
     headers: {
       'Access-Control-Allow-Origin': `${window.location.origin}`,
-      'Access-Control-Allow-Headers':
-        'Authorization, Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Headers': 'Authorization',
       'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTION',
       'Content-Type': 'application/json;charset=UTF-8',
       // eslint-disable-next-line prettier/prettier
