@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4a396f07.css",
+    "main.js": "/static/js/main.e33ed33f.js",
+    "static/js/787.0b145456.chunk.js": "/static/js/787.0b145456.chunk.js",
+    "static/media/pcgo-icon.png": "/static/media/pcgo-icon.bdadcc0823ff245f595d.png",
+    "index.html": "/index.html",
+    "main.4a396f07.css.map": "/static/css/main.4a396f07.css.map",
+    "main.e33ed33f.js.map": "/static/js/main.e33ed33f.js.map",
+    "787.0b145456.chunk.js.map": "/static/js/787.0b145456.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a396f07.css",
+    "static/js/main.e33ed33f.js"
+  ]
+}
