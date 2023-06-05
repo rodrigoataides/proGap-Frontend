@@ -36,7 +36,7 @@ export const getConfig = (type: string) => {
       'Access-Control-Allow-Headers': 'Authorization',
       'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTION',
       'Content-Type': 'application/json;charset=UTF-8',
-      Autorization: `Bearer ${localStorage.getItem('token_sso')}`,
+      Authorization: `Bearer ${localStorage.getItem('token_sso')}`,
       Token_sso: localStorage.getItem('token_sso'),
     },
   };
