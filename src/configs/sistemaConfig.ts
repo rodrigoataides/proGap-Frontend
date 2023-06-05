@@ -29,8 +29,17 @@ export const getConfig = (type: string) => {
       'Content-Type': 'application/json;charset=UTF-8',
     },
   };
-
   const configPriv = {
+    headers: {
+      'Access-Control-Allow-Origin': `${window.location.origin}`,
+      'Access-Control-Allow-Headers': 'Authorization',
+      'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTION',
+      'Content-Type': 'application/json;charset=UTF-8',
+      // prettier-ignore
+      'Authorization': `Bearer ${localStorage.getItem('token_sso')}`,
+    },
+  };
+  /*const configPriv = {
     headers: {
       'Access-Control-Allow-Origin': '*', //`${window.location.origin}`,
       'Access-Control-Allow-Headers':
@@ -40,11 +49,11 @@ export const getConfig = (type: string) => {
       // eslint-disable-next-line prettier/prettier
       // prettier-ignore
       'authorization': `Bearer ${localStorage.getItem('token_sso')}`,
-      // prettier-ignore
+
       // eslint-disable-next-line prettier/prettier
       'token-sso': localStorage.getItem('token_sso'),
     },
-  };
+  };*/
 
   if (type === 'priv') {
     return configPriv;
