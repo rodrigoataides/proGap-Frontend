@@ -32,9 +32,10 @@ export const getConfig = (type: string) => {
   const configPriv = {
     headers: {
       'Access-Control-Allow-Origin': `${window.location.origin}`,
-      'Access-Control-Allow-Headers': 'Authorization',
-      'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTION',
-      'Content-Type': 'application/json;charset=UTF-8',
+      'Access-Control-Allow-Headers':
+        'Authorization, Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HEAD, PUT',
+      'Content-Type': 'application/json;charset=utf-8',
       // prettier-ignore
       'Authorization': `Bearer ${localStorage.getItem('token_sso')}`,
     },
