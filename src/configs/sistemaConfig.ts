@@ -24,18 +24,18 @@ export const perfisSistema = {
 export const getConfig = (type: string) => {
   const configPub = {
     headers: {
-      'Access-Control-Allow-Origin': `${window.location.origin}`,
+      'Access-Control-Allow-Origin': window.location.origin,
       'Access-Control-Allow-Methods': '*',
       'Content-Type': 'application/json;charset=UTF-8',
     },
   };
   const configPriv = {
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': window.location.origin,
       'Access-Control-Allow-Headers': 'Authorization',
       'Access-Control-Allow-Methods': '*',
       'Content-Type': 'application/json;charset=UTF-8',
-      Authorization: `Bearer ${localStorage.getItem('token_sso')}`,
+      Authorization: 'Bearer ' + localStorage.getItem('token_sso'),
       'Token-sso': localStorage.getItem('token_sso'),
     },
   };
