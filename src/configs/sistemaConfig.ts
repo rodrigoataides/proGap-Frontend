@@ -31,30 +31,14 @@ export const getConfig = (type: string) => {
   };
   const configPriv = {
     headers: {
-      /*'Access-Control-Allow-Origin': `${window.location.origin}`,
+      'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': 'Authorization',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HEAD, PUT',
-      'Content-Type': 'application/json;charset=utf-8',
-      // prettier-ignore*/
-      Authorization: 'Bearer ' + localStorage.getItem('token_sso'),
-      /*'x-access-token': localStorage.getItem('token_sso'),*/
-    },
-  };
-  /*const configPriv = {
-    headers: {
-      'Access-Control-Allow-Origin': '*', //`${window.location.origin}`,
-      'Access-Control-Allow-Headers':
-        'Authorization, Origin, X-Requested-With, Content-Type, Accept, Token-Sso',
       'Access-Control-Allow-Methods': '*',
       'Content-Type': 'application/json;charset=UTF-8',
-      // eslint-disable-next-line prettier/prettier
-      // prettier-ignore
-      'authorization': `Bearer ${localStorage.getItem('token_sso')}`,
-
-      // eslint-disable-next-line prettier/prettier
-      'token-sso': localStorage.getItem('token_sso'),
+      Authorization: `Bearer ${localStorage.getItem('token_sso')}`,
+      'Token-sso': localStorage.getItem('token_sso'),
     },
-  };*/
+  };
 
   if (type === 'priv') {
     return configPriv;
