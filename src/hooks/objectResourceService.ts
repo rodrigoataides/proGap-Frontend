@@ -22,11 +22,6 @@ export async function getObjectResource(url: any) {
       message.error(
         'Não foi possível carregar o recurso, tente novamente mais tarde.',
       );
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(
       'Erro do sistema: ',
@@ -51,11 +46,6 @@ export async function postObjectResource(ObjectResource: ObjectResource) {
       message.warning(
         'Não foi possível criar um novo objeto no recurso, tente novamente mais tarde.',
       );
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(
       `An unexpected error ocourred while creating a new Object resource.${error}`,
@@ -81,11 +71,6 @@ export const updateObjectResource = async (
       message.error(
         'Não foi possivel atualizar o objetos do recurso. Tente novamente mais tarde.',
       );
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(
       'error',
@@ -102,11 +87,6 @@ export async function deleteObjectResource(id: any) {
       message.error('O tempo da sua sessão expirou, faça o login novamente');
     } else if (error !== 401) {
       message.error(`Não foi possivel deletar o eixos.\n${error}`);
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(error);
   }

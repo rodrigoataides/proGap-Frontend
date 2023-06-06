@@ -18,11 +18,6 @@ export async function getDestinations(url: any) {
       message.error(
         'Não foi possível obter a lista de destinação, tente novamente mais tarde.',
       );
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(
       `An unexpected error occurred while retrieving the destinations list.${error}`,
@@ -42,11 +37,6 @@ export async function postDestinations(Destinations: Destinations) {
       message.warning(
         'Não foi possível criar uma nova destinação, tente novamente mais tarde.',
       );
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(
       `An unexpected error ocourred while creating a new destinations.${error}`,
@@ -72,11 +62,6 @@ export const updateDestinations = async (
       message.error(
         'Não foi possivel atualizar a destinação. Tente novamente mais tarde.',
       );
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(
       `An unexpected error occurred while updating the destinations.${error}`,
@@ -92,11 +77,6 @@ export async function deleteDestinations(id: any) {
       message.error('O tempo da sua sessão expirou, faça o login novamente');
     } else if (error !== 401) {
       message.error(`Não foi possivel deletar a destinação.\n${error}`);
-    } else {
-      notification.warning({
-        message: 'Erro inesperado no sistema.',
-        duration: 10,
-      });
     }
     console.error(error);
   }
