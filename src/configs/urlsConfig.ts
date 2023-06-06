@@ -21,7 +21,8 @@ if (window.location.hostname.indexOf(domainNameProd) > -1) {
   ambiente = 'HOMO';
   if (window.location.hostname.indexOf(domainNameDesv) > -1) {
     //PARA DESENVOLVIMENTO
-    urlsServices.BACKENDWS = 'http://localhost:3011';
+    //urlsServices.BACKENDWS = 'http://localhost:3011';
+    urlsServices.BACKENDWS = 'http://10.6.52.25';
     //urlsServices.BACKEND = 'URLBACKENDHOMO';
   }
 }

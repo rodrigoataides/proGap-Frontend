@@ -1,4 +1,3 @@
-'use client';
 import { useAuth } from '../../contexts/auth/AuthProvider';
 import { Card, Col, Row } from 'antd';
 import {

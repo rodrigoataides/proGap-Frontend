@@ -1,6 +1,6 @@
 import { getConfig } from '../configs/sistemaConfig';
 import { APIObject } from './baseService/baseService';
-import { message } from 'antd';
+import { message, notification } from 'antd';
 
 interface Objects {
   name: any;
@@ -16,6 +16,11 @@ export async function getObject(url: any) {
       message.error(
         'Não foi possível obter a lista de objetos, tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       `An unexpected error occurred while retrieving the object list.${error}`,
@@ -35,6 +40,11 @@ export async function postObject(object: Objects) {
       message.warning(
         'Não foi possível criar um novo eixo, tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       `An unexpected error ocourred while creating a new objects object.${error}`,
@@ -53,6 +63,11 @@ export const updateObject = async (object: Objects, id: any) => {
       message.error(
         'Não foi possivel atualizar a entrega. Tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       'error',
@@ -69,6 +84,11 @@ export async function deleteObject(id: any) {
       message.error('O tempo da sua sessão expirou, faça o login novamente');
     } else if (error !== 401) {
       message.error(`Não foi possivel deletar o objeto.\n${error}`);
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(error);
   }

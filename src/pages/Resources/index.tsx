@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useState } from 'react';
 import {
   Button,
@@ -478,6 +477,7 @@ export default function Resources() {
 
   async function loadingObjectResourceForm() {
     const response = await getObjectResource('resourceobjects');
+    console.log(response);
     if (response !== false) {
       setObjectResource(response.data);
     } else {

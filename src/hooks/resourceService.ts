@@ -1,6 +1,6 @@
 import { getConfig } from '../configs/sistemaConfig';
 import { APIResource } from './baseService/baseService';
-import { message } from 'antd';
+import { message, notification } from 'antd';
 
 interface Resource {
   grantor: any;
@@ -25,6 +25,11 @@ export async function getResource(url: any) {
       message.error(
         'Não foi possível carregar o recurso, tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       `An unexpected error occurred while retrieving the resource list.${error}`,
@@ -45,6 +50,11 @@ export async function postResource(resource: Resource) {
       console.error(
         `Ocorreu um erro inesperado ao registrar um novo recurso.${error}`,
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
   }
 }
@@ -60,6 +70,11 @@ export const updateResource = async (resource: Resource, id: any) => {
       message.error(
         'Não foi possivel atualizar o recurso. Tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       'error',
@@ -76,6 +91,11 @@ export async function deleteResource(id: any) {
       message.error('O tempo da sua sessão expirou, faça o login novamente');
     } else if (error !== 401) {
       message.error(`Não foi possivel deletar o usuário.\n${error}`);
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(error);
   }

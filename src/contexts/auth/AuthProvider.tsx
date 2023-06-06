@@ -1,4 +1,3 @@
-'use client';
 import { sistemaNameSSO } from '../../configs/sistemaConfig';
 import { urlsServices } from '../../configs/urlsConfig';
 import { useAxiosSSO } from '../../hooks/useAxiosSSO';

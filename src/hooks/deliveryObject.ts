@@ -1,6 +1,6 @@
 import { getConfig } from '../configs/sistemaConfig';
 import { APIDeliveryObject } from './baseService/baseService';
-import { message } from 'antd';
+import { message, notification } from 'antd';
 
 interface DeliveryObject {
   deliveryDate: string;
@@ -18,6 +18,11 @@ export async function getDeliveryObject(url: any) {
       message.error(
         'Não foi possível obter a lista de entregas, tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       `An unexpected error occurred while retrieving the delivery list.${error}`,
@@ -41,6 +46,11 @@ export async function postDelivery(DeliveryObject: DeliveryObject) {
       message.warning(
         'Não foi possível criar uma nova entrega, tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       `An unexpected error ocourred while creating a new delivery object.${error}`,
@@ -66,6 +76,11 @@ export const updateDeliveryObject = async (
       message.error(
         'Não foi possivel atualizar a entrega. Tente novamente mais tarde.',
       );
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(
       'error',
@@ -82,6 +97,11 @@ export async function deleteDeliveryObject(id: any) {
       message.error('O tempo da sua sessão expirou, faça o login novamente');
     } else if (error !== 401) {
       message.error(`Não foi possivel deletar a entrega.\n${error}`);
+    } else {
+      notification.warning({
+        message: 'Erro inesperado no sistema.',
+        duration: 10,
+      });
     }
     console.error(error);
   }
