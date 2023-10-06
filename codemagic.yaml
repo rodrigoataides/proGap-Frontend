@@ -1,3 +1,6 @@
-scripts:
-  - name: Build for React         # Name of the section
-    script: npm run build   # The script(s) to be run in that section
+workflows:
+  hello-world:
+    name: Hello world workflow
+    scripts:
+      - name: Build for React         # Name of the section
+        script: npm run build   # The script(s) to be run in that section
